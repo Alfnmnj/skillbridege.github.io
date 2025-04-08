@@ -1373,6 +1373,29 @@
             });
         });
     });
+    <!-- Add this right before the closing </body> tag -->
+    // Direct standalone script for pricing toggle
+    document.getElementById('pricing-toggle').onclick = function() {
+        if (this.getAttribute('data-state') === 'monthly') {
+            // Switch to yearly
+            this.setAttribute('data-state', 'yearly');
+            document.getElementById('starter-price').innerHTML = '₹4,790';
+            document.getElementById('pro-price').innerHTML = '₹9,590';
+            document.getElementById('elite-price').innerHTML = '₹14,390';
+            document.getElementById('starter-period').innerHTML = 'per year';
+            document.getElementById('pro-period').innerHTML = 'per year';
+            document.getElementById('elite-period').innerHTML = 'per year';
+        } else {
+            // Switch to monthly
+            this.setAttribute('data-state', 'monthly');
+            document.getElementById('starter-price').innerHTML = '₹499';
+            document.getElementById('pro-price').innerHTML = '₹999';
+            document.getElementById('elite-price').innerHTML = '₹1499';
+            document.getElementById('starter-period').innerHTML = 'per month';
+            document.getElementById('pro-period').innerHTML = 'per month';
+            document.getElementById('elite-period').innerHTML = 'per month';
+        }
+    };
 </script>
 </body>
 </html>
