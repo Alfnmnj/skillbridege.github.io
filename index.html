@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>SkillBridge - Empowering the Next Generation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +25,7 @@
             padding: 0;
             box-sizing: border-box;
             scroll-behavior: smooth;
+            -webkit-tap-highlight-color: transparent;
         }
         
         body {
@@ -33,6 +34,7 @@
             color: #fff;
             overflow-x: hidden;
             line-height: 1.6;
+            text-size-adjust: 100%;
         }
         
         .loader {
@@ -50,8 +52,8 @@
         }
         
         .loader svg {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             animation: rotate 2s infinite linear, glow 2s infinite alternate;
         }
         
@@ -75,7 +77,7 @@
             top: 0;
             left: 0;
             width: 100%;
-            padding: 1.5rem 2rem;
+            padding: 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -88,7 +90,7 @@
         .logo {
             font-family: 'Cinzel Decorative', serif;
             font-weight: 700;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: #fff;
             text-decoration: none;
             display: flex;
@@ -97,19 +99,20 @@
         
         .logo span {
             color: var(--electric-blue);
-            margin-right: 5px;
+            margin-right: 3px;
         }
         
         nav ul {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 0.8rem;
         }
         
         nav a {
             color: var(--silver);
             text-decoration: none;
             font-weight: 500;
+            font-size: 0.9rem;
             transition: all 0.3s ease;
             position: relative;
         }
@@ -121,10 +124,10 @@
         nav a::after {
             content: '';
             position: absolute;
-            bottom: -5px;
+            bottom: -3px;
             left: 0;
             width: 0;
-            height: 2px;
+            height: 1px;
             background: var(--electric-blue);
             transition: width 0.3s ease;
         }
@@ -137,9 +140,10 @@
             background: transparent;
             color: var(--electric-blue);
             border: 1px solid var(--electric-blue);
-            padding: 0.5rem 1.5rem;
+            padding: 0.5rem 1rem;
             border-radius: 30px;
             font-weight: 600;
+            font-size: 0.9rem;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
@@ -181,7 +185,7 @@
         
         section {
             min-height: 100vh;
-            padding: 6rem 2rem 2rem;
+            padding: 5rem 1rem 2rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -196,8 +200,8 @@
         }
         
         h1 {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
             background: linear-gradient(90deg, #fff, var(--silver));
             -webkit-background-clip: text;
             background-clip: text;
@@ -205,28 +209,29 @@
         }
         
         h2 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 1rem;
             color: var(--silver);
         }
         
         h3 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 1rem;
         }
         
         p {
             margin-bottom: 1.5rem;
-            max-width: 700px;
+            max-width: 100%;
             color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
         }
         
         .subheading {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
             color: var(--silver);
         }
         
@@ -234,6 +239,7 @@
             max-width: 1400px;
             margin: 0 auto;
             width: 100%;
+            padding: 0 1rem;
         }
         
         .flex {
@@ -263,8 +269,9 @@
         .hero-content {
             position: relative;
             z-index: 2;
-            max-width: 1000px;
+            max-width: 100%;
             margin: 0 auto;
+            padding: 0 1rem;
         }
         
         .changing-text {
@@ -278,7 +285,8 @@
             display: flex;
             gap: 1rem;
             justify-content: center;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
         }
         
         .verticals {
@@ -286,22 +294,23 @@
         }
         
         .vertical-section {
-            height: 100vh;
+            min-height: 100vh;
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
+            padding: 5rem 1rem;
         }
         
         .vertical-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            max-width: 1200px;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            max-width: 100%;
             margin: 0 auto;
             align-items: center;
-            padding: 2rem;
+            padding: 1rem;
             position: relative;
             z-index: 5;
         }
@@ -311,7 +320,7 @@
             backdrop-filter: blur(10px);
             border: 1px solid var(--glass-border);
             border-radius: 15px;
-            padding: 2rem;
+            padding: 1.5rem;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
         }
@@ -323,7 +332,7 @@
         }
         
         .icon {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 1rem;
             color: var(--electric-blue);
         }
@@ -367,16 +376,16 @@
         
         .vertical-title {
             color: var(--electric-blue);
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             margin-bottom: 0.5rem;
             font-weight: 600;
         }
     
         
         .fonts-container {
-            max-width: 900px;
+            max-width: 100%;
             margin: 0 auto;
         }
         
@@ -384,11 +393,11 @@
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
             color: #fff;
-            padding: 1rem 1.5rem;
-            font-size: 1.2rem;
+            padding: 0.8rem 1rem;
+            font-size: 1rem;
             border-radius: 10px;
             width: 100%;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
         }
@@ -401,14 +410,14 @@
         
         .font-preview {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
         
         .font-card {
             background: rgba(255, 255, 255, 0.03);
-            padding: 2rem;
+            padding: 1.5rem;
             border-radius: 10px;
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.3s ease;
@@ -421,17 +430,17 @@
         }
         
         .font-name {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--silver);
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             letter-spacing: 1px;
             text-transform: uppercase;
         }
         
         .font-sample {
-            font-size: 2rem;
+            font-size: 1.5rem;
             line-height: 1.4;
-            min-height: 120px;
+            min-height: 80px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -448,22 +457,24 @@
         .cormorant {
             font-family: 'Cormorant Garamond', serif;
             font-weight: 600;
-            font-size: 2.5rem;
+            font-size: 1.8rem;
         }
         
         .testimonials {
             background: linear-gradient(to right, #0a0a0a, #121212);
             position: relative;
+            padding: 5rem 1rem;
         }
         
         .testimonial-slider {
             display: flex;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
-            gap: 2rem;
-            padding: 2rem 1rem;
+            gap: 1rem;
+            padding: 1rem 0.5rem;
             scrollbar-width: none;
             -ms-overflow-style: none;
+            -webkit-overflow-scrolling: touch;
         }
         
         .testimonial-slider::-webkit-scrollbar {
@@ -471,28 +482,28 @@
         }
         
         .testimonial-card {
-            min-width: 350px;
+            min-width: 280px;
             scroll-snap-align: start;
-            padding: 2rem;
+            padding: 1.5rem;
         }
         
         .quote {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-style: italic;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
+            margin-bottom: 1rem;
+            line-height: 1.6;
         }
         
         .client {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.8rem;
         }
         
         .client-img {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             overflow: hidden;
             filter: grayscale(100%);
@@ -507,61 +518,62 @@
         .client-info h4 {
             font-family: 'Inter', sans-serif;
             margin-bottom: 0.2rem;
-            font-size: 1rem;
+            font-size: 0.9rem;
         }
         
         .client-info p {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--silver);
             margin: 0;
         }
         
         .pricing {
             background: linear-gradient(135deg, #080808, #101010);
+            padding: 5rem 1rem;
         }
         
         .pricing-toggle {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 3rem;
-            gap: 1rem;
+            margin-bottom: 2rem;
+            gap: 0.8rem;
         }
         
         .toggle-label {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: var(--silver);
         }
         
         .toggle {
             position: relative;
             display: inline-block;
-            width: 60px;
-            height: 30px;
+            width: 50px;
+            height: 25px;
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 30px;
+            border-radius: 25px;
             cursor: pointer;
-            padding: 3px;
+            padding: 2px;
         }
         
         .toggle-thumb {
             position: absolute;
-            width: 24px;
-            height: 24px;
+            width: 21px;
+            height: 21px;
             background: var(--electric-blue);
             border-radius: 50%;
             transition: all 0.3s ease;
         }
         
         .toggle[data-state="yearly"] .toggle-thumb {
-            transform: translateX(30px);
+            transform: translateX(25px);
         }
         
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            max-width: 100%;
             margin: 0 auto;
         }
         
@@ -569,42 +581,43 @@
             display: flex;
             flex-direction: column;
             transition: all 0.3s ease;
-            min-height: 450px;
+            min-height: 400px;
         }
         
         .pricing-header {
             text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
         
         .price {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 700;
             color: #fff;
             margin-bottom: 0.5rem;
         }
         
         .price-period {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--silver);
         }
         
         .feature-list {
             list-style: none;
-            margin: 2rem 0;
+            margin: 1.5rem 0;
             flex-grow: 1;
         }
         
         .feature-list li {
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
             display: flex;
             align-items: flex-start;
             gap: 0.5rem;
+            font-size: 0.9rem;
         }
         
         .feature-icon {
             color: var(--electric-blue);
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
         
         .pricing-cta {
@@ -614,15 +627,15 @@
         
         .contact {
             background: linear-gradient(to right, #0a0a0a, #0f0f0f);
-            padding-bottom: 6rem;
+            padding: 5rem 1rem 3rem;
         }
         
         .map-container {
             position: relative;
-            height: 400px;
+            height: 300px;
             border-radius: 15px;
             overflow: hidden;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
         
         .map-overlay {
@@ -641,40 +654,48 @@
         
         .contact-info {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
         }
         
         .contact-item {
             display: flex;
             align-items: flex-start;
-            gap: 1rem;
+            gap: 0.8rem;
         }
         
         .contact-icon {
             color: var(--electric-blue);
-            font-size: 1.5rem;
+            font-size: 1.2rem;
         }
         
         footer {
             background: #080808;
-            padding: 2rem;
+            padding: 1.5rem;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
         
         .footer-content {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            max-width: 1200px;
+            max-width: 100%;
             margin: 0 auto;
+            gap: 1.5rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
         }
         
         .footer-links a {
             color: var(--silver);
             text-decoration: none;
-            margin-left: 1.5rem;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             transition: color 0.3s ease;
         }
         
@@ -684,12 +705,12 @@
         
         .social-icons {
             display: flex;
-            gap: 1rem;
+            gap: 0.8rem;
         }
         
         .social-icon {
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.05);
             display: flex;
@@ -704,8 +725,8 @@
         }
         
         .social-icon svg {
-            width: 20px;
-            height: 20px;
+            width: 18px;
+            height: 18px;
             fill: var(--silver);
         }
         
@@ -716,7 +737,7 @@
         /* Visual for each vertical */
         .vertical-visual {
             position: relative;
-            height: 400px;
+            height: 300px;
             width: 100%;
             border-radius: 15px;
             overflow: hidden;
@@ -730,14 +751,15 @@
         .language-toggle {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            margin-top: 1.5rem;
+            gap: 0.8rem;
+            margin-top: 1rem;
         }
         
         .toggle-option {
-            padding: 0.5rem 1rem;
+            padding: 0.4rem 0.8rem;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 0.9rem;
             transition: all 0.3s ease;
         }
         
@@ -750,12 +772,13 @@
         .quiz-preview {
             background: rgba(255, 255, 255, 0.03);
             border-radius: 10px;
-            padding: 1.5rem;
-            margin-top: 2rem;
+            padding: 1rem;
+            margin-top: 1.5rem;
         }
         
         .quiz-question {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1rem;
         }
         
         .quiz-options {
@@ -763,12 +786,13 @@
         }
         
         .quiz-option {
-            padding: 0.8rem 1rem;
-            margin-bottom: 0.8rem;
+            padding: 0.6rem 0.8rem;
+            margin-bottom: 0.6rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 5px;
             cursor: pointer;
             transition: all 0.3s ease;
+            font-size: 0.9rem;
         }
         
         .quiz-option:hover {
@@ -780,8 +804,8 @@
         .campaign-gallery {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin-top: 1.5rem;
+            gap: 0.8rem;
+            margin-top: 1rem;
         }
         
         .campaign-item {
@@ -802,63 +826,56 @@
             transform: scale(1.05);
         }
         
-        /* Media queries */
-        @media screen and (max-width: 992px) {
+        /* Media queries for larger screens */
+        @media screen and (min-width: 768px) {
             h1 {
                 font-size: 3rem;
             }
             
             h2 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
             .vertical-content {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
                 gap: 2rem;
-                text-align: center;
+                text-align: left;
             }
             
-            .vertical-section {
-                height: auto;
-                min-height: 100vh;
-                padding: 6rem 1rem 3rem;
-            }
-        }
-        
-        @media screen and (max-width: 768px) {
-            header {
-                padding: 1rem;
-            }
-            
-            nav ul {
-                gap: 1rem;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-                gap: 1.5rem;
-                text-align: center;
-            }
-            
-            .footer-links a {
-                margin: 0 0.75rem;
+            .pricing-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             }
             
             .contact-info {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+            
+            .footer-content {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+            
+            .footer-links {
+                justify-content: flex-end;
+            }
+            
+            .footer-links a {
+                margin-left: 1.5rem;
             }
         }
         
-        @media screen and (max-width: 576px) {
+        @media screen and (min-width: 992px) {
             h1 {
-                font-size: 2.5rem;
+                font-size: 3.5rem;
             }
             
-            .button-group {
-                flex-direction: column;
-                width: 100%;
-                max-width: 300px;
-                margin: 2rem auto 0;
+            section {
+                padding: 6rem 2rem 2rem;
+            }
+            
+            .container {
+                padding: 0 2rem;
             }
         }
     </style>
@@ -889,7 +906,7 @@
     <section class="hero" id="hero">
         <div id="particles-js"></div>
         <div class="hero-content">
-            <h1>Empowering the Next Generation <br>of Creators & Leaders</h1>
+            <h1>Empowering the Next Generation of Creators & Leaders</h1>
             <p class="subheading">Where innovation meets <span class="changing-text" id="changing-text">potential</span></p>
             <div class="button-group">
                 <a href="#verticals" class="cta-button secondary-button">Explore Verticals</a>
@@ -942,437 +959,403 @@
             <div class="vertical-bg"></div>
             <div class="vertical-overlay"></div>
             <div class="vertical-content">
-                <div class="vertical-info>
-                <p class="vertical-title">03 / Marketing & Promotion</p>
-                <h2>Campaign Creator</h2>
-                <p>Movie & cause-based marketing via youth-led movements. We design and execute powerful campaigns that resonate with young audiences. Our team combines creative strategy with data-driven insights to maximize reach and impact.</p>
-                <a href="#" class="cta-button">View Campaigns</a>
-            </div>
-            <div class="vertical-visual glass-card">
-                <div class="campaign-gallery">
-                    <div class="campaign-item">
-                        <img src="Image/A1.jpg" alt="Campaign 1">
-                    </div>
-                    <div class="campaign-item">
-                        <img src="Image/A2.jpg" alt="Campaign 2">
-                    </div>
-                    <div class="campaign-item">
-                        <img src="Image/A3.jpg" alt="Campaign 3">
+                <div class="vertical-info">
+                    <p class="vertical-title">03 / Marketing & Promotion</p>
+                    <h2>Campaign Creator</h2>
+                    <p>Movie & cause-based marketing via youth-led movements. We design and execute powerful campaigns that resonate with young audiences. Our team combines creative strategy with data-driven insights to maximize reach and impact.</p>
+                    <a href="#" class="cta-button">View Campaigns</a>
+                </div>
+                <div class="vertical-visual glass-card">
+                    <div class="campaign-gallery">
+                        <div class="campaign-item">
+                            <img src="Image/A1.jpg" alt="Campaign 1">
+                        </div>
+                        <div class="campaign-item">
+                            <img src="Image/A2.jpg" alt="Campaign 2">
+                        </div>
+                        <div class="campaign-item">
+                            <img src="Image/A3.jpg" alt="Campaign 3">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <p class="subheading">Success stories from our community</p>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-card glass-card">
+                    <p class="quote">"SkillBridge transformed how our college approaches skill development. The AI mentorship program has been revolutionary for our students."</p>
+                    <div class="client">
+                        <div class="client-img">
+                            <img src="Image/TM.png" alt="Client Photo">
+                        </div>
+                        <div class="client-info">
+                            <h4>Dr. Thomas George K</h4>
+                            <p>Principal, Lead College</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card glass-card">
+                    <p class="quote">"YouthConnect's industrial exposure trips gave our students real-world insights that no classroom could provide. The networking opportunities were invaluable."</p>
+                    <div class="client">
+                        <div class="client-img">
+                            <img src="Image/p.jpg" alt="Client Photo">
+                        </div>
+                        <div class="client-info">
+                            <h4>Priya Nair</h4>
+                            <p>Head of Department, Engineering</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card glass-card">
+                    <p class="quote">"The campaign we created with SkillBridge for our film launch reached over 2 million young viewers. Their strategy was innovative and result-oriented."</p>
+                    <div class="client">
+                        <div class="client-img">
+                            <img src="Image/A.jpg" alt="Client Photo">
+                        </div>
+                        <div class="client-info">
+                            <h4>Augustine paul</h4>
+                            <p>Film Producer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Testimonials Section -->
-<section class="testimonials" id="testimonials">
-    <div class="container">
-        <h2>What Our Clients Say</h2>
-        <p class="subheading">Success stories from our community</p>
-        
-        <div class="testimonial-slider">
-            <div class="testimonial-card glass-card">
-                <p class="quote">"SkillBridge transformed how our college approaches skill development. The AI mentorship program has been revolutionary for our students."</p>
-                <div class="client">
-                    <div class="client-img">
-                        <img src="Image/TM.png" alt="Client Photo">
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Choose Your Plan</h2>
+            <p class="subheading">Flexible options for different needs</p>
+            
+            <div class="pricing-toggle">
+                <span class="toggle-label">Monthly</span>
+                <div class="toggle" id="pricing-toggle" data-state="monthly">
+                    <div class="toggle-thumb"></div>
+                </div>
+                <span class="toggle-label">Yearly (20% off)</span>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card glass-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="price" id="starter-price">₹499</div>
+                        <div class="price-period" id="starter-period">per month</div>
                     </div>
-                    <div class="client-info">
-                        <h4>Dr. Thomas George K </h4>
-                        <p>Principal, Lead College</p>
+                    
+                    <ul class="feature-list">
+                        <li><span class="feature-icon">✓</span> QuizCraft Basic</li>
+                        <li><span class="feature-icon">✓</span> Email Support</li>
+                        <li><span class="feature-icon">✗</span> SkillBridge Learning</li>
+                        <li><span class="feature-icon">✗</span> Career Workshops</li>
+                    </ul>
+                    
+                    <a href="#" class="cta-button pricing-cta">Get Started</a>
+                </div>
+                
+                <div class="pricing-card glass-card">
+                    <div class="pricing-header">
+                        <h3>Pro</h3>
+                        <div class="price" id="pro-price">₹999</div>
+                        <div class="price-period" id="pro-period">per month</div>
                     </div>
+                    
+                    <ul class="feature-list">
+                        <li><span class="feature-icon">✓</span> Everything in Starter</li>
+                        <li><span class="feature-icon">✓</span> SkillBridge Learning</li>
+                        <li><span class="feature-icon">✓</span> Career Workshops</li>
+                        <li><span class="feature-icon">✓</span> Priority Support</li>
+                        <li><span class="feature-icon">✗</span> Premium Branding</li>
+                    </ul>
+                    
+                    <a href="#" class="cta-button primary-button pricing-cta">Choose Pro</a>
+                </div>
+                
+                <div class="pricing-card glass-card">
+                    <div class="pricing-header">
+                        <h3>Elite</h3>
+                        <div class="price" id="elite-price">₹1499</div>
+                        <div class="price-period" id="elite-period">per month</div>
+                    </div>
+                    
+                    <ul class="feature-list">
+                        <li><span class="feature-icon">✓</span> Everything in Pro</li>
+                        <li><span class="feature-icon">✓</span> Premium Branding</li>
+                        <li><span class="feature-icon">✓</span> AI Mentor</li>
+                        <li><span class="feature-icon">✓</span> Campaign Creator Access</li>
+                        <li><span class="feature-icon">✓</span> 24/7 Dedicated Support</li>
+                    </ul>
+                    
+                    <a href="#" class="cta-button secondary-button pricing-cta">Choose Elite</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p class="subheading">We'd love to hear from you</p>
+            
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.8738246977287!2d76.6251827!3d10.8412448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDUwJzI5LjAiTiA3NsKwMzcnNDAuMCJF!5e0!3m2!1sen!2sin!4v1712604352562!5m2!1sen!2sin&markers=color:red%7C10.84124,76.62776" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                    <h3>Visit Our Campus</h3>
                 </div>
             </div>
             
-            <div class="testimonial-card glass-card">
-                <p class="quote">"YouthConnect's industrial exposure trips gave our students real-world insights that no classroom could provide. The networking opportunities were invaluable."</p>
-                <div class="client">
-                    <div class="client-img">
-                        <img src="Image/p.jpg" alt="Client Photo">
-                    </div>
-                    <div class="client-info">
-                        <h4>Priya Nair</h4>
-                        <p>Head of Department, Engineering</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h4>Address</h4>
+                        <p>Lead College of Management, Dhoni, Palakkad, Kerala</p>
                     </div>
                 </div>
-            </div>
-            
-            <div class="testimonial-card glass-card">
-                <p class="quote">"The campaign we created with SkillBridge for our film launch reached over 2 million young viewers. Their strategy was innovative and result-oriented."</p>
-                <div class="client">
-                    <div class="client-img">
-                        <img src="Image/A.jpg" alt="Client Photo">
-                    </div>
-                    <div class="client-info">
-                        <h4>Augustine paul</h4>
-                        <p>Film Producer</p>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+91-XXXXXXXXXX</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Pricing Section -->
-<section class="pricing" id="pricing">
-    <div class="container">
-        <h2>Choose Your Plan</h2>
-        <p class="subheading">Flexible options for different needs</p>
-        
-        <div class="pricing-toggle">
-            <span class="toggle-label">Monthly</span>
-            <div class="toggle" id="pricing-toggle" data-state="monthly">
-                <div class="toggle-thumb"></div>
-            </div>
-            <span class="toggle-label">Yearly (20% off)</span>
-        </div>
-        
-        <div class="pricing-grid">
-            <div class="pricing-card glass-card">
-                <div class="pricing-header">
-                    <h3>Starter</h3>
-                    <div class="price" id="starter-price">₹499</div>
-                    <div class="price-period" id="starter-period">per month</div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>hello@skillbridge.ai</p>
+                    </div>
                 </div>
-                
-                <ul class="feature-list">
-                    <li><span class="feature-icon">✓</span> QuizCraft Basic</li>
-                    <li><span class="feature-icon">✓</span> Email Support</li>
-                    <li><span class="feature-icon">✗</span> SkillBridge Learning</li>
-                    <li><span class="feature-icon">✗</span> Career Workshops</li>
-                </ul>
-                
-                <a href="#" class="cta-button pricing-cta">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <a href="#" class="logo"><span>S</span>killBridge</a>
+            
+            <div class="social-icons">
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
             </div>
             
-            <div class="pricing-card glass-card">
-                <div class="pricing-header">
-                    <h3>Pro</h3>
-                    <div class="price" id="pro-price">₹999</div>
-                    <div class="price-period" id="pro-period">per month</div>
-                </div>
-                
-                <ul class="feature-list">
-                    <li><span class="feature-icon">✓</span> Everything in Starter</li>
-                    <li><span class="feature-icon">✓</span> SkillBridge Learning</li>
-                    <li><span class="feature-icon">✓</span> Career Workshops</li>
-                    <li><span class="feature-icon">✓</span> Priority Support</li>
-                    <li><span class="feature-icon">✗</span> Premium Branding</li>
-                </ul>
-                
-                <a href="#" class="cta-button primary-button pricing-cta">Choose Pro</a>
-            </div>
-            
-            <div class="pricing-card glass-card">
-                <div class="pricing-header">
-                    <h3>Elite</h3>
-                    <div class="price" id="elite-price">₹1499</div>
-                    <div class="price-period" id="elite-period">per month</div>
-                </div>
-                
-                <ul class="feature-list">
-                    <li><span class="feature-icon">✓</span> Everything in Pro</li>
-                    <li><span class="feature-icon">✓</span> Premium Branding</li>
-                    <li><span class="feature-icon">✓</span> AI Mentor</li>
-                    <li><span class="feature-icon">✓</span> Campaign Creator Access</li>
-                    <li><span class="feature-icon">✓</span> 24/7 Dedicated Support</li>
-                </ul>
-                
-                <a href="#" class="cta-button secondary-button pricing-cta">Choose Elite</a>
+            <div class="footer-links">
+                <a href="#">Legal</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
             </div>
         </div>
-    </div>
-</section>
+    </footer>
 
-<!-- Contact Section -->
-<section class="contact" id="contact">
-    <div class="container">
-        <h2>Get In Touch</h2>
-        <p class="subheading">We'd love to hear from you</p>
-        
-        <div class="map-container">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.8738246977287!2d76.6251827!3d10.8412448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDUwJzI5LjAiTiA3NsKwMzcnNDAuMCJF!5e0!3m2!1sen!2sin!4v1712604352562!5m2!1sen!2sin&markers=color:red%7C10.84124,76.62776" 
-                width="100%" 
-                height="100%" 
-                style="border:0;" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-            <h3>Visit Our Campus</h3>
-        </div>
-        
-        <div class="contact-info">
-            <div class="contact-item">
-                <div class="contact-icon">📍</div>
-                <div>
-                    <h4>Address</h4>
-                    <p>Lead College of Management, Dhoni, Palakkad, Kerala</p>
-                </div>
-            </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hide loader after page loads
+            setTimeout(function() {
+                document.getElementById('loader').classList.add('hidden');
+            }, 1000);
             
-            <div class="contact-item">
-                <div class="contact-icon">📞</div>
-                <div>
-                    <h4>Phone</h4>
-                    <p>+91-XXXXXXXXXX</p>
-                </div>
-            </div>
-            
-            <div class="contact-item">
-                <div class="contact-icon">✉️</div>
-                <div>
-                    <h4>Email</h4>
-                    <p>hello@skillbridge.ai</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer>
-    <div class="footer-content">
-        <a href="#" class="logo"><span>S</span>killBridge</a>
-        
-        <div class="social-icons">
-            <a href="#" class="social-icon">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                </svg>
-            </a>
-            <a href="#" class="social-icon">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                </svg>
-            </a>
-            <a href="#" class="social-icon">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-            </a>
-        </div>
-        
-        <div class="footer-links">
-            <a href="#">Legal</a>
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-        </div>
-    </div>
-</footer>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Hide loader after page loads
-        setTimeout(function() {
-            document.getElementById('loader').classList.add('hidden');
-        }, 1000);
-        
-        // Initialize particles
-        particlesJS('particles-js', {
-            particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: "#00c2ff" },
-                shape: { type: "circle" },
-                opacity: { value: 0.5, random: true },
-                size: { value: 3, random: true },
-                line_linked: {
-                    enable: true,
-                    distance: 150,
-                    color: "#00c2ff",
-                    opacity: 0.2,
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 1,
-                    direction: "none",
-                    random: true,
-                    out_mode: "out"
+            // Initialize particles with mobile-friendly settings
+            particlesJS('particles-js', {
+                particles: {
+                    number: { value: 40, density: { enable: true, value_area: 600 } },
+                    color: { value: "#00c2ff" },
+                    shape: { type: "circle" },
+                    opacity: { value: 0.5, random: true },
+                    size: { value: 2, random: true },
+                    line_linked: {
+                        enable: true,
+                        distance: 120,
+                        color: "#00c2ff",
+                        opacity: 0.2,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 0.8,
+                        direction: "none",
+                        random: true,
+                        out_mode: "out"
+                    }
                 }
-            }
-        });
-        
-        // Changing text animation
-        const words = ["potential", "creativity", "vision", "excellence", "innovation"];
-        let currentWordIndex = 0;
-        const changingText = document.getElementById('changing-text');
-        
-        setInterval(() => {
-            currentWordIndex = (currentWordIndex + 1) % words.length;
-            changingText.style.opacity = 0;
+            });
             
-            setTimeout(() => {
-                changingText.textContent = words[currentWordIndex];
-                changingText.style.opacity = 1;
-            }, 500);
-        }, 3000);
-        
-        // Font demo input
-        const fontInput = document.getElementById('font-input');
-        const cinzelSample = document.getElementById('cinzel-sample');
-        const playfairSample = document.getElementById('playfair-sample');
-        const cormorantSample = document.getElementById('cormorant-sample');
-        
-        fontInput.addEventListener('input', function() {
-            const value = this.value || 'SkillBridge';
-            cinzelSample.textContent = value;
-            playfairSample.textContent = value;
-            cormorantSample.textContent = value;
-        });
-        
-        // Language toggle for QuizCraft
-        const languageOptions = document.querySelectorAll('.toggle-option');
-        const quizQuestion = document.getElementById('quiz-question');
-        const quizOptions = document.querySelectorAll('.quiz-option');
-        
-        const quizContent = {
-            english: {
-                question: "What is the SI unit of electric current?",
-                options: ["Volt", "Ampere", "Watt", "Ohm"]
-            },
-            malayalam: {
-                question: "വൈദ്യുത പ്രവാഹത്തിന്റെ SI യൂണിറ്റ് എന്താണ്?",
-                options: ["വോൾട്ട്", "ആമ്പിയർ", "വാട്ട്", "ഓം"]
+            // Changing text animation
+            const words = ["potential", "creativity", "vision", "excellence", "innovation"];
+            let currentWordIndex = 0;
+            const changingText = document.getElementById('changing-text');
+            
+            setInterval(() => {
+                currentWordIndex = (currentWordIndex + 1) % words.length;
+                changingText.style.opacity = 0;
+                
+                setTimeout(() => {
+                    changingText.textContent = words[currentWordIndex];
+                    changingText.style.opacity = 1;
+                }, 500);
+            }, 3000);
+            
+            // Pricing toggle
+            const pricingToggle = document.getElementById('pricing-toggle');
+            const starterPrice = document.getElementById('starter-price');
+            const proPrice = document.getElementById('pro-price');
+            const elitePrice = document.getElementById('elite-price');
+            const starterPeriod = document.getElementById('starter-period');
+            const proPeriod = document.getElementById('pro-period');
+            const elitePeriod = document.getElementById('elite-period');
+            
+            pricingToggle.addEventListener('click', function() {
+                const currentState = this.getAttribute('data-state');
+                
+                if (currentState === 'monthly') {
+                    this.setAttribute('data-state', 'yearly');
+                    starterPrice.textContent = '₹4,792';
+                    proPrice.textContent = '₹9,590';
+                    elitePrice.textContent = '₹14,390';
+                    starterPeriod.textContent = 'per year';
+                    proPeriod.textContent = 'per year';
+                    elitePeriod.textContent = 'per year';
+                } else {
+                    this.setAttribute('data-state', 'monthly');
+                    starterPrice.textContent = '₹499';
+                    proPrice.textContent = '₹999';
+                    elitePrice.textContent = '₹1499';
+                    starterPeriod.textContent = 'per month';
+                    proPeriod.textContent = 'per month';
+                    elitePeriod.textContent = 'per month';
+                }
+            });
+            
+            // Scroll animations with mobile optimizations
+            gsap.registerPlugin(ScrollTrigger);
+            
+            // Animate sections on scroll with reduced motion for mobile
+            gsap.utils.toArray('.vertical-section').forEach((section, i) => {
+                gsap.fromTo(
+                    section.querySelector('.vertical-info'),
+                    { y: 30, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        scrollTrigger: {
+                            trigger: section,
+                            start: 'top 80%',
+                            toggleActions: 'play none none none',
+                            markers: false
+                        }
+                    }
+                );
+                
+                gsap.fromTo(
+                    section.querySelector('.vertical-visual'),
+                    { y: 30, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.6,
+                        delay: 0.2,
+                        scrollTrigger: {
+                            trigger: section,
+                            start: 'top 80%',
+                            toggleActions: 'play none none none',
+                            markers: false
+                        }
+                    }
+                );
+            });
+            
+            // Testimonial parallax effect - disabled for mobile
+            if (window.innerWidth > 768) {
+                const testimonialCards = document.querySelectorAll('.testimonial-card');
+                testimonialCards.forEach(card => {
+                    card.addEventListener('mousemove', function(e) {
+                        const rect = card.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        
+                        const centerX = rect.width / 2;
+                        const centerY = rect.height / 2;
+                        
+                        const moveX = (x - centerX) / 20;
+                        const moveY = (y - centerY) / 20;
+                        
+                        card.style.transform = `translateY(-5px) rotateX(${-moveY}deg) rotateY(${moveX}deg)`;
+                    });
+                    
+                    card.addEventListener('mouseleave', function() {
+                        card.style.transform = 'translateY(0) rotateX(0) rotateY(0)';
+                    });
+                });
             }
-        };
-        
-        languageOptions.forEach(option => {
-            option.addEventListener('click', function() {
-                const lang = this.getAttribute('data-lang');
+            
+            // Optimize touch interactions
+            document.querySelectorAll('a, button').forEach(element => {
+                element.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.98)';
+                });
                 
-                // Update active state
-                languageOptions.forEach(opt => opt.classList.remove('active'));
-                this.classList.add('active');
-                
-                // Update quiz content
-                quizQuestion.textContent = quizContent[lang].question;
-                quizOptions.forEach((opt, index) => {
-                    opt.textContent = quizContent[lang].options[index];
+                element.addEventListener('touchend', function() {
+                    this.style.transform = 'scale(1)';
                 });
             });
         });
         
-        
-        // Pricing toggle
-        const pricingToggle = document.getElementById('pricing-toggle');
-        const starterPrice = document.getElementById('starter-price');
-        const proPrice = document.getElementById('pro-price');
-        const elitePrice = document.getElementById('elite-price');
-        const starterPeriod = document.getElementById('starter-period');
-        const proPeriod = document.getElementById('pro-period');
-        const elitePeriod = document.getElementById('elite-period');
-        
-        pricingToggle.addEventListener('click', function() {
-            const currentState = this.getAttribute('data-state');
-            
-            if (currentState === 'monthly') {
+        // Direct standalone script for pricing toggle
+        document.getElementById('pricing-toggle').onclick = function() {
+            if (this.getAttribute('data-state') === 'monthly') {
+                // Switch to yearly
                 this.setAttribute('data-state', 'yearly');
-                starterPrice.textContent = '₹4,792';
-                proPrice.textContent = '₹9,590';
-                elitePrice.textContent = '₹14,390';
-                starterPeriod.textContent = 'per year';
-                proPeriod.textContent = 'per year';
-                elitePeriod.textContent = 'per year';
+                document.getElementById('starter-price').innerHTML = '₹4,790';
+                document.getElementById('pro-price').innerHTML = '₹9,590';
+                document.getElementById('elite-price').innerHTML = '₹14,390';
+                document.getElementById('starter-period').innerHTML = 'per year';
+                document.getElementById('pro-period').innerHTML = 'per year';
+                document.getElementById('elite-period').innerHTML = 'per year';
             } else {
+                // Switch to monthly
                 this.setAttribute('data-state', 'monthly');
-                starterPrice.textContent = '₹499';
-                proPrice.textContent = '₹999';
-                elitePrice.textContent = '₹1499';
-                starterPeriod.textContent = 'per month';
-                proPeriod.textContent = 'per month';
-                elitePeriod.textContent = 'per month';
+                document.getElementById('starter-price').innerHTML = '₹499';
+                document.getElementById('pro-price').innerHTML = '₹999';
+                document.getElementById('elite-price').innerHTML = '₹1499';
+                document.getElementById('starter-period').innerHTML = 'per month';
+                document.getElementById('pro-period').innerHTML = 'per month';
+                document.getElementById('elite-period').innerHTML = 'per month';
             }
-        });
-        
-        // Scroll animations
-        gsap.registerPlugin(ScrollTrigger);
-        
-        // Animate sections on scroll
-        gsap.utils.toArray('.vertical-section').forEach((section, i) => {
-            gsap.fromTo(
-                section.querySelector('.vertical-info'),
-                { x: -50, opacity: 0 },
-                {
-                    x: 0,
-                    opacity: 1,
-                    duration: 0.8,
-                    scrollTrigger: {
-                        trigger: section,
-                        start: 'top 70%',
-                        toggleActions: 'play none none none'
-                    }
-                }
-            );
-            
-            gsap.fromTo(
-                section.querySelector('.vertical-visual'),
-                { x: 50, opacity: 0 },
-                {
-                    x: 0,
-                    opacity: 1,
-                    duration: 0.8,
-                    delay: 0.2,
-                    scrollTrigger: {
-                        trigger: section,
-                        start: 'top 70%',
-                        toggleActions: 'play none none none'
-                    }
-                }
-            );
-        });
-        
-        // Testimonial parallax effect
-        const testimonialCards = document.querySelectorAll('.testimonial-card');
-        testimonialCards.forEach(card => {
-            card.addEventListener('mousemove', function(e) {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                
-                const moveX = (x - centerX) / 20;
-                const moveY = (y - centerY) / 20;
-                
-                card.style.transform = `translateY(-5px) rotateX(${-moveY}deg) rotateY(${moveX}deg)`;
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                card.style.transform = 'translateY(0) rotateX(0) rotateY(0)';
-            });
-        });
-    });
-    <!-- Add this right before the closing </body> tag -->
-
-    // Direct standalone script for pricing toggle
-    document.getElementById('pricing-toggle').onclick = function() {
-        if (this.getAttribute('data-state') === 'monthly') {
-            // Switch to yearly
-            this.setAttribute('data-state', 'yearly');
-            document.getElementById('starter-price').innerHTML = '₹4,790';
-            document.getElementById('pro-price').innerHTML = '₹9,590';
-            document.getElementById('elite-price').innerHTML = '₹14,390';
-            document.getElementById('starter-period').innerHTML = 'per year';
-            document.getElementById('pro-period').innerHTML = 'per year';
-            document.getElementById('elite-period').innerHTML = 'per year';
-        } else {
-            // Switch to monthly
-            this.setAttribute('data-state', 'monthly');
-            document.getElementById('starter-price').innerHTML = '₹499';
-            document.getElementById('pro-price').innerHTML = '₹999';
-            document.getElementById('elite-price').innerHTML = '₹1499';
-            document.getElementById('starter-period').innerHTML = 'per month';
-            document.getElementById('pro-period').innerHTML = 'per month';
-            document.getElementById('elite-period').innerHTML = 'per month';
-        }
-    };
-
-    
-    
-</script>
+        };
+    </script>
 </body>
 </html>
